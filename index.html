@@ -34,6 +34,7 @@
         <nav class="flex justify-center mb-10 border-b">
             <button id="home-btn" class="nav-btn px-6 py-3 text-lg font-medium border-b-2 border-blue-600 text-blue-600">Home</button>
             <button id="privacy-btn" class="nav-btn px-6 py-3 text-lg font-medium border-b-2 border-transparent text-gray-500 hover:text-blue-600">Privacy Policy</button>
+            <button id="release-btn" class="nav-btn px-6 py-3 text-lg font-medium border-b-2 border-transparent text-gray-500 hover:text-blue-600">Release Notes</button>
         </nav>
 
         <main>
@@ -46,15 +47,14 @@
                 <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
                     <h3 class="text-xl font-semibold mb-2">Support</h3>
                     <p class="text-gray-700">For questions or support, please contact us by email:</p>
-                    <a href="mailto:Your-Support-Email@example.com" class="text-blue-600 font-semibold hover:underline">originaljefes@gmail.com</a>
-                    
+                    <a href="mailto:support@yourdomain.com" class="text-blue-600 font-semibold hover:underline">originaljefes@gmail.com</a>
                 </div>
             </section>
 
             <!-- Privacy Policy Section -->
             <section id="privacy-section" class="content-section bg-white p-8 rounded-lg shadow-md">
                 <h2 class="text-3xl font-semibold mb-4">Privacy Policy</h2>
-                <p class="text-sm text-gray-500 mb-6">Last Updated: July 30, 2025</p>
+                <p class="text-sm text-gray-500 mb-6">Last Updated: July 31, 2025</p>
 
                 <div class="space-y-4 text-gray-700 leading-relaxed">
                     <p>This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information when you use our application.</p>
@@ -69,7 +69,53 @@
 
                     <h3 class="text-xl font-semibold pt-4">Contact Us</h3>
                     <p>If you have any questions about this Privacy Policy, you can contact us by email:</p>
-                    <p><a href="mailto:Your-Support-Email@example.com" class="text-blue-600 font-semibold hover:underline">originaljefes@gmail.com</a></p>
+                    <p><a href="mailto:support@yourdomain.com" class="text-blue-600 font-semibold hover:underline">originaljefes@gmail.com</a></p>
+                </div>
+            </section>
+
+            <!-- Release Notes Section -->
+            <section id="release-section" class="content-section bg-white p-8 rounded-lg shadow-md space-y-8">
+                <div>
+                    <h2 class="text-3xl font-semibold">Release Notes</h2>
+                    <p class="text-base text-gray-600 mt-1">Version: 1.0.0 (Last Updated: July 30, 2025)</p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold border-b pb-2 mb-3">Disclaimer</h3>
+                    <p class="text-gray-700 leading-relaxed">This app was not developed by the Department of Veterans Affairs or any of its branches (i.e. Veterans Benefits Administration). It was developed by a 3rd party, unrelated in any official capacity with the Department of Veterans Affairs or any official US Government entities.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold border-b pb-2 mb-3">Key Features</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>First Payment Date Calculation:</strong> Accurately calculates the date of the first regular monthly disability payment based on a user-provided "Effective Date," in accordance with VA payment rules (38 CFR § 3.31).</li>
+                        <li><strong>Clear Explanations:</strong> Provides simple, easy-to-understand explanations of how VA payments work, including the concept of paying "in arrears."</li>
+                        <li><strong>Direct VA Contact:</strong> Includes a clickable phone number that opens the device's native dialer, pre-filled with the official VA benefits help line number (1-800-827-1000).</li>
+                        <li><strong>Dual Theme Support:</strong> Features a fully functional Light Mode and Dark Mode to ensure user comfort in any lighting condition. The theme is easily toggled with a switch.</li>
+                        <li><strong>Cross-Platform Design:</strong> The user interface is designed to be clean and functional on both iOS and Android devices, with platform-specific adjustments for optimal user experience. <strong>(Android Version Coming Soon)</strong></li>
+                        <li><strong>No Account Required:</strong> No need to create an account or provide an email to use the app.</li>
+                        <li><strong>Privacy Focused & Offline:</strong> The app is completely offline and does not collect, store, or transmit any user data.</li>
+                        <li><strong>No Selling of Information:</strong> The app does not sell any information that is stored on your device or entered by the user.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold border-b pb-2 mb-3">Known Issues</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>UI on Niche Devices:</strong> Minor visual inconsistencies may exist on certain tablets or older phone models.</li>
+                        <li><strong>iOS Devices (All):</strong> The app name on the Home screen is missing spaces between each word. This will be fixed in a future update.</li>
+                        <li><strong>iOS Devices:</strong> On devices with smaller screens, a user may need to scroll to see all information.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold border-b pb-2 mb-3">Limitations</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>No Payment Amount Calculation:</strong> This calculator does not determine the monetary amount of your payment.</li>
+                        <li><strong>No Back Pay Calculation:</strong> This version does not calculate retroactive (back pay) benefits.</li>
+                        <li><strong>Informational Use Only:</strong> The app is an estimation tool only and does not constitute legal or financial advice.</li>
+                        <li><strong>No Account or Data Storage:</strong> The app does not save any user-entered dates or have any account features.</li>
+                    </ul>
                 </div>
             </section>
         </main>
@@ -84,19 +130,24 @@
     <script>
         const homeBtn = document.getElementById('home-btn');
         const privacyBtn = document.getElementById('privacy-btn');
+        const releaseBtn = document.getElementById('release-btn');
+        
         const homeSection = document.getElementById('home-section');
         const privacySection = document.getElementById('privacy-section');
+        const releaseSection = document.getElementById('release-section');
 
         function showSection(sectionToShow, btnToActivate) {
             // Hide all sections
             homeSection.classList.remove('active');
             privacySection.classList.remove('active');
+            releaseSection.classList.remove('active');
 
             // Deactivate all buttons
-            homeBtn.classList.remove('border-blue-600', 'text-blue-600');
-            homeBtn.classList.add('border-transparent', 'text-gray-500');
-            privacyBtn.classList.remove('border-blue-600', 'text-blue-600');
-            privacyBtn.classList.add('border-transparent', 'text-gray-500');
+            const allBtns = [homeBtn, privacyBtn, releaseBtn];
+            allBtns.forEach(btn => {
+                btn.classList.remove('border-blue-600', 'text-blue-600');
+                btn.classList.add('border-transparent', 'text-gray-500');
+            });
 
             // Show the target section and activate the target button
             sectionToShow.classList.add('active');
@@ -106,7 +157,9 @@
 
         homeBtn.addEventListener('click', () => showSection(homeSection, homeBtn));
         privacyBtn.addEventListener('click', () => showSection(privacySection, privacyBtn));
+        releaseBtn.addEventListener('click', () => showSection(releaseSection, releaseBtn));
     </script>
 
 </body>
 </html>
+
