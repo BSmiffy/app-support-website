@@ -106,22 +106,30 @@
         const releaseSection = document.getElementById('release-section');
 
         function showSection(sectionToShow, btnToActivate) {
-            // Hide all sections
             homeSection.classList.remove('active');
             releaseSection.classList.remove('active');
 
-            // Deactivate all buttons
             const allBtns = [homeBtn, releaseBtn];
             allBtns.forEach(btn => {
                 btn.classList.remove('border-blue-600', 'text-blue-600');
                 btn.classList.add('border-transparent', 'text-gray-500');
             });
 
-            // Show the target section and activate the target button
             sectionToShow.classList.add('active');
             btnToActivate.classList.add('border-blue-600', 'text-blue-600');
             btnToActivate.classList.remove('border-transparent', 'text-gray-500');
         }
+
+        // --- NEW CODE ADDED HERE ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash;
+            if (hash === '#release-section') {
+                showSection(releaseSection, releaseBtn);
+            } else {
+                showSection(homeSection, homeBtn);
+            }
+        });
+        // --------------------------
 
         homeBtn.addEventListener('click', () => showSection(homeSection, homeBtn));
         releaseBtn.addEventListener('click', () => showSection(releaseSection, releaseBtn));
